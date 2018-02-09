@@ -69,7 +69,7 @@ findErrors form =
     in
     if List.isEmpty errorList then
         if String.right 1 form.adjective /= "a" then
-            Just <| Errors "adjektivet måste sluta på bokstaven a" errorList
+            Just <| Errors "adjektivet måste sluta på bokstaven a" [ Adjective ]
         else
             Nothing
     else
